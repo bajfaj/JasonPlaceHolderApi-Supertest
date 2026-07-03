@@ -43,11 +43,12 @@ This is pure `supertest` HTTP client + `chai` assertions.
 
 ### **Setup & Run**
 
-1.  **Install**
+1.  **Install dependencies**
     ```bash
     npm install
 2. **Run all tests against DEV**
-    ```npm run cucumber:dev
+    ```bash
+    npm run cucumber:dev
 
 **Test Coverage**
 features/api/postsApi.feature covers 7 CRUD scenarios:
