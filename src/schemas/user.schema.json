@@ -1,0 +1,16 @@
+{
+  "$id": "user.schema.json",
+  "type": "object",
+  "required": ["id", "name", "username", "email"],
+  "properties": {
+    "id": { "type": "integer" },
+    "name": { "type": "string" },
+    "username": { "type": "string" },
+    "email": { "type": "string", "format": "email" },
+    "address": { "type": "object" },
+    "phone": { "type": "string" },
+    "website": { "type": "string" },
+    "company": { "type": "object" }
+  },
+  "additionalProperties": false
+}

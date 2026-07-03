@@ -1,0 +1,6 @@
+{
+  "type": "array",
+  "items": { "$ref": "post.schema.json" },
+  "minItems": 100,
+  "maxItems": 100
+}

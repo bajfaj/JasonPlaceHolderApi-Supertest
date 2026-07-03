@@ -1,0 +1,24 @@
+{
+  "scripts": {
+    "cucumber:api": "cucumber-js src/features/api --require-module ts-node/register --require src/step-definitions/api/**/*.ts --require src/support/**/*.ts",
+    "cucumber": "cucumber-js src/features --require-module ts-node/register --require src/step-definitions/**/*.ts --require src/support/**/*.ts",
+    "cucumber:dev": "cross-env ENV=DEV npm run cucumber:api",
+    "cucumber:stage": "ENV=STAGE npm run cucumber:api"
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "^13.0.0",
+    "@cucumber/cucumber-expressions": "^20.0.0",
+    "@types/chai": "^5.2.3",
+    "@types/supertest": "^7.2.0",
+    "ajv-formats": "^3.0.1",
+    "chai": "^6.2.2",
+    "cross-env": "^10.1.0",
+    "expect": "^30.4.1",
+    "supertest": "^7.2.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.3"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2"
+  }
+}
