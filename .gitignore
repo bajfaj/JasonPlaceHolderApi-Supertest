@@ -1,0 +1,36 @@
+# Dependencies
+node_modules/
+package-lock.json.backup*
+
+# Build output
+dist/
+build/
+*.tsbuildinfo
+
+# Environment files - secrets!
+.env
+.env.*
+!.env.example
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+logs/
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE folders
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Cucumber + test output
+reports/
+cucumber-report.*
+screenshots/
+videos/
