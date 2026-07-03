@@ -1,8 +1,8 @@
-# JSONPlaceholder API - Cucumber BDD Baseline
+# JSONPlaceholder API - Cucumber BDD
 
 BDD API test framework for https://jsonplaceholder.typicode.com using Cucumber, TypeScript, Chai, and Supertest.
 
-This is `Step 1: Baseline`. No Playwright yet. Pure `supertest` HTTP client + `chai` assertions.
+This is pure `supertest` HTTP client + `chai` assertions.
 
 ### **Tech Stack**
 | Tool | Why |
@@ -15,6 +15,7 @@ This is `Step 1: Baseline`. No Playwright yet. Pure `supertest` HTTP client + `c
 
 ### **Project Structure**
 
+```
 **JASONPLACEHOLDERAPI/**
 ├── src/
 │   ├── features/api/
@@ -30,10 +31,12 @@ This is `Step 1: Baseline`. No Playwright yet. Pure `supertest` HTTP client + `c
 │       ├── postsArray.schema.json
 │       └── user.schema.json
 ├── package.json
-└── tsconfig.jsonjavascript
+└── tsconfig.json
+```
+
 ### **Key Design Decisions - Step 1**
 
-1.  **No `apiClient.ts` wrapper**: We call `request(baseURL)` directly. Keeps baseline minimal. Wrapper comes in Step 2 with Playwright.
+1.  **No `apiClient.ts` wrapper**: We call `request(baseURL)` directly. Keeps baseline minimal. Wrapper can be added later if nedded.
 2.  **`CustomWorld` for state**: No top-level `let response`. All state lives on `this.response` and `this.newPostData`. Required for Cucumber parallel runs.
 3.  **`function() {}` not `() => {}`**: Cucumber needs `function` to bind `this = CustomWorld`. Arrow functions break state.
 4.  **DocString for POST/PUT**: `with body:` steps use Gherkin `""" JSON """` blocks -> `docString: string` param.
@@ -44,7 +47,7 @@ This is `Step 1: Baseline`. No Playwright yet. Pure `supertest` HTTP client + `c
     ```bash
     npm install
 2. **Run all tests against DEV**
-    npm run cucumber:dev
+    ```npm run cucumber:dev
 
 **Test Coverage**
 features/api/postsApi.feature covers 7 CRUD scenarios:
