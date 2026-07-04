@@ -1,4 +1,4 @@
-# JSONPlaceholder API - Cucumber BDD
+# JSONPlaceholder API - Supertest + Cucumber BDD
 
 BDD API test framework for https://jsonplaceholder.typicode.com using Cucumber, TypeScript, Chai, and Supertest.
 
